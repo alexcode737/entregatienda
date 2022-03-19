@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+*{
+    font-family: 'Oswald', sans-serif;
+}
+
+#imageninicio{
+    height: 300px;
+    width: 100%;
+}
+
+#imageninicio2{
+    margin-left: 108%;
+}
+
+#menunav{
+    background: linear-gradient(
+        #eef4fa 10%, 
+        #0331ff 90%
+        
+    );
+
+;
+}
+
+#letras{
+    color: white;
+    font-size: 20px;
+
+}
+
+.link{
+    text-decoration: none;
+    margin: 25px;
+    margin-bottom: 200px;
+}
+
+.pie-pagina{
+    width: 100%;
+    background-image: url("../img/fondoFooter.jpg");
+    background-size: cover;
+    color: white;
+}
+
+.pie-pagina .grupo-1{
+    
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0;
+}
+
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h2{
+    margin-bottom: 25px;
+    font-size: 30px;
+ }
+
+.pie-pagina .grupo-1 .box p{
+   margin-bottom: 25px;
+}
+
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin-right: 15px;
+ }
+
+ .pie-pagina .grupo-2{
+    background-color: rgba(65, 62, 62, 0.158);
+    padding: 15px 10px;
+    text-align: center;
+ }
+
+ @media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0;
+    }
+ }
