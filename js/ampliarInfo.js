@@ -9,7 +9,7 @@ export function ampliarInformacion(event){
             precio:event.target.parentElement.querySelector("h4").textContent
 
         }
-        console.log(producto)
+        //console.log(producto)
 
         //asociando los valores respectivos al modal
         let foto = document.getElementById("fotoinfo")
@@ -21,4 +21,6 @@ export function ampliarInformacion(event){
         let precio = document.getElementById("precioinfo");
         precio.textContent = producto.precio;
     }
+
+    return producto;
 }

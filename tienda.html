@@ -10,6 +10,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="icon" href="img/soccer-ball-310065_640.ico">
     <title>Tienda futbol pasión</title>
 </head>
@@ -35,7 +36,16 @@
             <li class="nav-item">
               <a class="nav-link" href="momentos.html" id="letras">Momentos Historicos</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#" >
+                <i class="bi bi-cart4 icono" id="carrito"></i>
+                <span id="capsula" class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger invisible">
+                  0
+                </span>
+              </a>
+            </li>
           </ul>
+
         </div>
       </div>
     </nav>      
@@ -66,21 +76,51 @@
                 <h3 class="text-center" id="nombreinfo"></h3>
                 <p class="text-center" id="descripcioninfo"></p>
                 <h4 class="text-center" id="precioinfo"></h4>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Cantidad</label>
+                  <input type="number" class="form-control" id="cantidadProducto" min="1" value="1">
+                </div>
                </div>
-
-               
              </div>
            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-warning">Añadir al carrito</button>
+            <button type="button" class="btn btn-warning" id="botonAdd">Añadir al carrito</button>
+            <button type="button" class="btn btn-secondary" id="botonLimpiar">Limpiar</button>
           </div>
         </div>
       </div>
     </div>
    </section>
+   <section>
+     <!-- Modal -->
+<div class="modal fade" id="resumencarrito" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Tienda Total Fotball</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container" id="contenedorventa">
 
+        </div>
+          <h3 id="total"></h3>
+          <p id="dolares"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="convertidor">Convertir en dolares</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" id="comprar">Comprar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+   </section>
 
    <footer class="pie-pagina">
     <div class="grupo-1">
@@ -107,10 +147,10 @@
       <div class="box">
         <h2>Siguenos</h2>
         <div class="red-social">
-          <a href="" class="fa fa-facebook"> </a>
-          <a href="" class="fa fa-instagram"> </a>
-          <a href="" class="fa fa-regular fa-envelope"> </a>
-          <a href="" class="fa fa-solid fa-square-phone"> </a>
+          <a href="https://www.facebook.com/robinxonalexiis.torreszorrilla" class="fa fa-facebook"> </a>
+          <a href="https://www.instagram.com/alexis_torres_17/" class="fa fa-instagram"> </a>
+          <a href="mailto:alexis15torres16zorrilla@gmail.com" class="fa fa-regular fa-envelope"> </a>
+          <a href="https://wa.me/+573146086720" class="fa fa-solid fa-square-phone"> </a>
         </div>
       </div>
     </div>
@@ -120,6 +160,26 @@
       </small>
     </div>
 </footer>
+
+<section>
+  <!-- Modal al comprar-->
+<div class="modal fade" id="modalcomprar" tabindex="-1" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Tienda futbol total</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h1 id="textodeexito"></h1>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
     
    <script src="https://kit.fontawesome.com/31767ed22d.js" crossorigin="anonymous"></script>
    <script src="js/controlador.js" type="module"></script>

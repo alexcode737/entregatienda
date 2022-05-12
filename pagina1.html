@@ -10,6 +10,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="icon" href="img/soccer-ball-310065_640.ico">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -38,6 +39,9 @@
                 </li>
               </ul>
             </div>
+            <ul class="navbar-nav dropdown  me-auto mb-2 mb-lg-0 ml-auto " id="ulavatar">
+              <h4 id="avatar" class="nav-link ml-auto "></h4>
+            </ul>
           </div>
         </nav>
     </header>
@@ -65,18 +69,31 @@
               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-              <div>
-                Registrate o inicia sesión en nuestra pagina para que tengas una mejor experiencia de usuario.
-              </div>
+              Registrate o inicia sesión en nuestra pagina para que tengas una mejor experiencia de usuario.
               <div class="dropdown mt-3">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                  Opciones
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+
+                <form id="formularioregistro">
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Correo</label>
+                    <input type="email" class="form-control" id="correo">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password">
+                  </div>
+                  <button type="enviar" class="btn btn-primary" id="botonregistro">Enviar</button>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                </form>
+
+                  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                      <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Registrate</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                        
+
+                    </div>
+
               </div>
             </div>
           </div>
@@ -123,29 +140,7 @@
         </div>
     </section>
 
-    <section>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Registrate</h5>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <div>
-                Registrate o inicia sesión en nuestra pagina para que tengas una mejor experiencia de usuario.
-              </div>
-              <div class="dropdown mt-3">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                  Opciones 
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-    </section>
+
 
 
 
@@ -172,12 +167,12 @@
           </p>
         </div>
         <div class="box">
-          <h2>Siguenos</h2>
+          <h2>Sigueme</h2>
           <div class="red-social">
-            <a href="" class="fa fa-facebook"> </a>
-            <a href="" class="fa fa-instagram"> </a>
-            <a href="" class="fa fa-regular fa-envelope"> </a>
-            <a href="" class="fa fa-solid fa-square-phone"> </a>
+            <a href="https://www.facebook.com/robinxonalexiis.torreszorrilla" class="fa fa-facebook"> </a>
+            <a href="https://www.instagram.com/alexis_torres_17/" class="fa fa-instagram"> </a>
+            <a href="mailto:alexis15torres16zorrilla@gmail.com" class="fa fa-regular fa-envelope"> </a>
+            <a href="https://wa.me/+573146086720" class="fa fa-solid fa-square-phone"> </a>
           </div>
         </div>
       </div>
@@ -188,8 +183,29 @@
       </div>
   </footer>
 
+<section>
+    <!-- Modal -->
+  <div class="modal fade" id="modalinformativo" tabindex="-1" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Tienda futbol total</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="informaciongeneral"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <script src="js/firebase.js" type="module"></script>
+    <script src="js/registro.js" type="module"></script>
     <script src="https://kit.fontawesome.com/31767ed22d.js" crossorigin="anonymous"></script>
-    <script src="./js/evaluacionM1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

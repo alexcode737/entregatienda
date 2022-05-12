@@ -16,6 +16,14 @@
 
 }
 
+#diseñoIcono{
+    color: white;
+}
+
+#diseñoIcono:hover{
+    color: gray;
+}
+
 .fondomovil{
     background-image: url("../img/fondoInicio2.jpg");
     background-attachment: fixed;

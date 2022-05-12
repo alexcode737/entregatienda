@@ -34,6 +34,30 @@
     margin-bottom: 200px;
 }
 
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #eef4fa;
+    align-items: center;
+    align-content: space-between;
+}
+
+.body-target{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    background-color: #ffffff;
+    color: #101111;
+    width: 85%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    height: 300px;
+    border-radius: 0.7em;
+    align-items: center;
+    box-shadow: 10px 10px 5px gray;
+    border: 1px solid rgb(134, 134, 255);
+}
+
 .pie-pagina{
     width: 100%;
     background-image: url("../img/fondoFooter.jpg");
