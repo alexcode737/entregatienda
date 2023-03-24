@@ -12,8 +12,8 @@
 #letras{
     color: white;
     font-size: 20px;
-
 }
+
 
 .link{
     text-decoration: none;
@@ -90,5 +90,5 @@
  }
 
  #carrito{
-     margin-left: 1000px;
- }
+    margin-left: 800px;
+}

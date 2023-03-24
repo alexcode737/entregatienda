@@ -8,6 +8,7 @@
     width: 100%;
 }
 
+
 #imageninicio2{
     margin-left: 108%;
 }
@@ -37,7 +38,7 @@
 .flex-container{
     display: flex;
     flex-direction: column;
-    background-color: #eef4fa;
+    background-image: url('../imgM/fondo-momentos.png');
     align-items: center;
     align-content: space-between;
 }

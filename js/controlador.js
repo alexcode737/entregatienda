@@ -50,28 +50,29 @@ botonAdd.addEventListener("click",function(evento){
     //1. capturar la cantidad del producto
     let cantidad = document.getElementById("cantidadProducto").value
     
-
-    //2. agrego la cantidad al objeto producto
-    producto.cantidad = cantidad;
-    producto.sTotal = cantidad * producto.precio;
-    producto.total = producto.sTotal;
-    //3. agregar el producto al carrito
-    carrito.push(producto);
-    
-    //4. calculo la sumatoria de toda las cantidades
-    let suma = 0;
-    carrito.forEach(function(producto){
-         
-    suma = suma + Number(producto.cantidad);
-
-    PintarCarrito(suma);
+    if(cantidad != 0){
+        //2. agrego la cantidad al objeto producto
+        producto.cantidad = cantidad;
+        producto.sTotal = cantidad * producto.precio;
+        producto.total = producto.sTotal;
+        //3. agregar el producto al carrito
+        carrito.push(producto);
         
-    })
-    let sTotal = 0;
-    carrito.forEach(function(precio){
-    sTotal = sTotal + Number(producto.sTotal);
-})
+        //4. calculo la sumatoria de toda las cantidades
+        let suma = 0;
+        carrito.forEach(function(producto){
+            
+        suma = suma + Number(producto.cantidad);
 
+        PintarCarrito(suma);
+            
+        })
+        let sTotal = 0;
+        carrito.forEach(function(precio){
+        sTotal = sTotal + Number(producto.sTotal);
+        })
+    }
+})
 
     // Limpiar carrito
     let botonLimpiar = document.getElementById("botonLimpiar")
@@ -83,7 +84,6 @@ botonAdd.addEventListener("click",function(evento){
         let valorDolar = document.getElementById("dolares")
         valorDolar.textContent = ""; 
     })
-})
 
 let Resultado = 0
 let dolar = 0;
